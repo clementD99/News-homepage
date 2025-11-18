@@ -1,0 +1,134 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 15px;
+}
+
+ul {
+  display: contents;
+  list-style-type: none;
+}
+
+div {
+  margin-bottom: 2rem;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 4rem auto 0;
+  padding: 0 2rem;
+}
+
+/* ----- elements pour classe header | elements for header class ----- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 2.3rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: hsl(236, 13%, 42%);
+}
+
+/* ----- Pour le milieu de page | for the middle page ----- */
+
+.elements {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ---- Colonne gauche ---- */
+
+.infos {
+  display: flex;
+  margin-top: 0.313rem;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+}
+
+.info-title {
+  flex: 1.2;
+}
+
+.left {
+  margin-right: 1.75rem;
+}
+
+.left img {
+  max-width: 100%;
+  display: block;
+}
+
+.left h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+.left p {
+  max-width: 480px;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.left button {
+  background: #f15c57;
+  border: none;
+  padding: 0.9rem 2rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* ---- Aside ---- */
+
+.news {
+  background-color: #0b1424;
+  color: white;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.news h2 {
+  color: #e9a33b;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.news article {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.news article h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.news article p {
+  color: #b7bfcc;
+}
