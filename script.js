@@ -40,3 +40,25 @@ fetchCards().then((cards) => {
     displayCards(element);
   }
 });
+
+// ----- Responsive sidebar ----- //
+
+const menuBtn = document.getElementById("icon-menu");
+const closeBtn = document.getElementById("close-btn");
+const sideMenu = document.querySelector(".side-menu");
+const overlay = document.querySelector(".overlay");
+
+menuBtn.addEventListener("click", () => {
+  sideMenu.classList.add("open");
+  overlay.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  sideMenu.classList.remove("open");
+  overlay.style.display = "none";
+});
+
+overlay.addEventListener("click", () => {
+  sideMenu.classList.remove("open");
+  overlay.style.display = "none";
+});
