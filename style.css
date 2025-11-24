@@ -15,6 +15,8 @@ p {
 ul {
   display: contents;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 div {
@@ -27,12 +29,17 @@ div {
   padding: 0 2rem;
 }
 
-/* ----- elements pour classe header | elements for header class ----- */
+/* ----- Header ----- */
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.icon-menu {
+  display: none;
+  cursor: pointer;
 }
 
 .links {
@@ -49,14 +56,12 @@ div {
   color: hsl(35, 77%, 62%);
 }
 
-/* ----- Pour le milieu de page | for the middle page ----- */
+/* ----- La page du milieu | the middle page ----- */
 
 .elements {
   display: flex;
   align-items: flex-start;
 }
-
-/* ---- Colonne gauche ---- */
 
 .infos {
   display: flex;
@@ -77,9 +82,13 @@ div {
   margin-right: 1.75rem;
 }
 
-.left img {
+.img-desktop {
   max-width: 100%;
   display: block;
+}
+
+.img-mobile {
+  display: none;
 }
 
 .left h1 {
@@ -110,7 +119,7 @@ div {
   color: white;
 }
 
-/* ---- Aside ---- */
+/* ----- Aside ----- */
 
 .news {
   background-color: hsl(240, 100%, 5%);
@@ -148,7 +157,7 @@ div {
 }
 
 #cards h3,
-h4 {
+#cards h4 {
   margin: 0;
 }
 
@@ -179,4 +188,97 @@ h4 {
   justify-content: center;
   flex-direction: column;
   gap: 1.563rem;
+}
+
+/* ----- Modal + sidebar ----- */
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 150;
+  height: 100%;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100vh;
+  background: white;
+  padding: 2rem 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.close-icon {
+  width: 25px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.side-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: hsl(240, 100%, 5%);
+  font-size: 1.2rem;
+}
+
+/* ----- Elements in responsive ----- */
+
+@media screen and (max-width: 375px) {
+  #container {
+    padding: 0 1rem;
+  }
+
+  .icon-menu {
+    display: block;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .elements {
+    flex-direction: column;
+  }
+
+  .infos {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .left {
+    margin: 0;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  #cards {
+    display: block;
+  }
+
+  .details {
+    gap: 0.938rem;
+  }
 }
