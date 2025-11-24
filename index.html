@@ -16,6 +16,12 @@
     <section id="container">
       <div class="header">
         <img src="/assets/images/logo.svg" alt="A big W" />
+        <img
+          id="icon-menu"
+          class="icon-menu"
+          src="/assets/images/icon-menu.svg"
+          alt="Responvise sidebar"
+        />
         <nav class="links">
           <ul>
             <li><a href="#">Home</a></li>
@@ -26,11 +32,37 @@
           </ul>
         </nav>
       </div>
+      <div class="overlay"></div>
+
+      <!-- La modale | the modal -->
+      <div class="side-menu">
+        <img
+          id="close-btn"
+          class="close-icon"
+          src="/assets/images/icon-menu-close.svg"
+          alt="close"
+        />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </div>
       <div class="elements">
         <div class="left">
-          <picture>
-            <img src="/assets/images/image-web-3-desktop.jpg" alt="" />
-          </picture>
+          <img
+            class="img-desktop"
+            src="/assets/images/image-web-3-desktop.jpg"
+            alt="wooden games"
+          />
+          <img
+            class="img-mobile"
+            src="/assets/images/image-web-3-mobile.jpg"
+            alt="wooden games"
+          />
+
           <div class="infos">
             <div class="info-title">
               <h1>The Bright Future of Web 3.0?</h1>
@@ -75,9 +107,7 @@
         <a href="https://www.frontendmentor.io/" target="_blank"
           >Frontend Mentor</a
         >. Coded by
-        <a href="https://www.frontendmentor.io/profile/clementD99"
-          >Your Name Here</a
-        >.
+        <a href="https://www.frontendmentor.io/profile/clementD99">Clément</a>.
       </div>
     </section>
     <script src="./script.js" defer></script>
