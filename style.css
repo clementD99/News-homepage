@@ -144,6 +144,11 @@ div {
 .news article h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.news article h3:hover {
+  color: hsl(35, 77%, 62%);
 }
 
 .news article p {
